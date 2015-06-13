@@ -1,3 +1,14 @@
-<div id='container'>
-  <!-- Your html here -->
+<div>  
+  <a href = '/#/shorten'>
+    <button style = "position: relative; margin-left: 10px">Shorten</button>
+  </a>
 </div>
+<div id='container'>
+    <li ng-controller="LinksController as links" ng-init="getLinks()" ng-repeat="link in data.links">
+        <p><strong> {{ link.title }}</strong></p>
+        <a href="{{link.ur}}">{{ link.url }}</a> {{link.code}}
+        <br>
+    </li>
+</div>
+<br>
+
